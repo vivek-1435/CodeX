@@ -1,0 +1,148 @@
+/* Body Styling */
+body {
+    text-align: center;
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(-45deg, #2fcd69, #101313, #1f1c2c, #2980b9);
+    background-size: 400% 400%;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+    margin: 0;
+}
+
+/* Background Animation */
+@keyframes gradientBG {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Chatbox Container Styling */
+#container {
+    width: 90%;
+    max-width: 800px;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    backdrop-filter: blur(8px);
+    display: flex;
+    flex-direction: column;
+    height: 80vh; /* Height of the container */
+}
+
+/* Chatbox Styling */
+#chatbox {
+    flex-grow: 1;
+    overflow-y: auto;
+    border: 2px solid #fff;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.6);
+    border-radius: 12px;
+    text-align: left;
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 15px;
+    box-sizing: border-box;
+}
+
+/* User and Bot Messages Styling */
+.user {
+    color: cyan;
+}
+
+.bot {
+    color: yellow;
+}
+
+/* User Input Field Styling */
+#user_input {
+    width: 100%; /* Full width of the container */
+    height: 60px; /* Larger height */
+    padding: 15px;
+    font-size: 18px;
+    border: 2px solid #fff;
+    border-radius: 12px;
+    background-color: rgba(255, 255, 255, 0.9); /* Lighter background */
+    color: #000;
+    box-sizing: border-box; /* Ensure padding doesn't affect height */
+}
+
+/* Input Field Focus State */
+#user_input:focus {
+    background-color: rgba(255, 255, 255, 1);
+    border-color: #3498db;
+    outline: none;
+    box-shadow: 0 0 10px rgba(52, 152, 219, 0.7);
+}
+
+/* Button Styling */
+/* Container for Buttons */
+.button-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Space between buttons */
+    margin-top: 10px;
+}
+
+/* Button Styling */
+button {
+    width: 60px;  /* Set width to make the button circular */
+    height: 60px;  /* Set height to match the width */
+    border-radius: 50%;  /* Fully round border to make it a sphere */
+    background: #3498db;
+    color: white;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background 0.3s ease, transform 0.3s ease;
+    font-size: 18px; /* Larger font size for better visibility */
+    border: none;
+}
+
+/* Button Hover Effect */
+button:hover {
+    background: #2980b9;
+    transform: scale(1.1); /* Slightly enlarge button on hover */
+}
+
+
+/* Title Styling */
+h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #ff0000;
+    text-shadow: 2px 2px 8px rgba(219, 226, 12, 0.599),
+                 2px 2px 12px rgba(255, 255, 255, 0.4);
+    background: linear-gradient(90deg, #ff9900, #ffcc00);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    border-bottom: 3px solid #ffcc00;
+    padding-bottom: 5px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    #container {
+        width: 95%;
+        height: 90vh; /* Adjust container height for smaller screens */
+    }
+
+    h2 {
+        font-size: 2rem;
+    }
+
+    #user_input {
+        font-size: 16px;
+        height: 50px; /* Adjust input field height for smaller screens */
+    }
+
+    button {
+        font-size: 12px; /* Smaller font size for buttons on mobile */
+    }
+}
